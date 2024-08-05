@@ -1,0 +1,374 @@
+/* 背景 */
+body {
+    background-image: url("../images/background1.png");/*背景图片*/
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 主页简介容器 */
+.jianjie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-image: url("../images/kuai.png"); */
+    background-color: rgba(255,255,255,0.9);
+    border-radius: 10%;
+    background-repeat: no-repeat;
+    position: fixed; /* 固定位置 */
+    top: 20px; /* 距离顶部 20px */
+    left: 3%; /* 距离左侧 3% */
+    width: 30%;
+    max-width: 300px;
+    height: 28%;
+    max-height: 200px;
+    text-align: center;
+    /* margin-top: 10px; */
+    padding: 10px;
+    z-index: 1; /* 确保简介容器在最上层 */
+}
+
+.avatar {
+    margin-top: 15px;
+    width: 30%;
+    border-radius: 50%;
+    object-fit: fill;
+}
+
+.Furinaname {
+    color: #7179f7;
+    font-size: 20px;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.introduction {
+    color: #3e47c3;
+    font-size: 14px;
+    font-style: italic;
+}
+
+/* 扩展按钮样式 */
+.expand-buttons {
+    display: none;  
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.jianjie:hover .expand-buttons {
+    display: block;
+}
+
+.expand-button {
+    display: block;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    text-decoration: none;
+    color: #333;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.expand-button:hover {
+    background-color: #e0e0e0;
+}
+
+
+/* 主页下面的链接容器 */
+.account {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../images/kuai.png");
+    background-color: rgba(255,255,255,0.9);
+    background-repeat: no-repeat;
+    position: fixed; /* 固定位置 */
+    top: 270px; /* 距离顶部 270px */
+    left: 3%; /* 距离左侧 3% */
+    width: 30%;
+    max-width: 300px;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    z-index: 1; /* 确保链接容器在最上层 */
+}
+
+.account-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.account-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px; /* 调整两列之间的间距 */
+}
+
+.account a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.favicon {
+    width: 16px; /* 调整图标大小 */
+    height: 16px;
+    margin-left: 5px; /* 调整图标和文本之间的间距 */
+}
+
+/* 根据链接的类名来设定颜色 */
+.linktoluogu {
+    color: #538edc;
+}
+
+.linktocodeforces {
+    color: #76271d;
+}
+
+.linktoatcoder {
+    color: #16127a;
+}
+
+.linktogithub {
+    color: #000000;
+}
+
+.linktocsdn {
+    color: #e46464;
+}
+
+.linktobilibili {
+    color: #505de9;
+}
+.yulan {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 20px;
+    left: 32%;
+    width: 70%;
+    max-width: 800px;
+    padding: 5px;
+    z-index: 1;
+}
+
+.blog-preview {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.blog-preview h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.blog-preview a {
+    color: #7179f7;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.blog-preview a:hover {
+    text-decoration: underline;
+}
+
+/* 搜索框 */
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed; /* 固定位置 */
+    top: 20px; /* 距离顶部 20px */
+    left: 32%; /* 距离左侧 30% */
+    width: 70%; /* 宽度占页面的 80% */
+    max-width: 800px;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1; /* 确保搜索框在最上层 */
+}
+
+.search-input {
+    flex-grow: 1; /* 使输入框占据剩余空间 */
+    height: 40px; /* 设置输入框的高度为 40px */
+    border: none;
+    border-radius: 20px;
+    padding: 0 15px;
+    font-size: 16px; /* 调整字体大小 */
+    outline: none;
+}
+
+.search-button {
+    width: 50px; /* 设置按钮宽度 */
+    height: 45px; /* 设置按钮高度 */
+    border: none;
+    border-radius: 15px;
+    margin-left: 10px;
+    background-color: #7179f7;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-button:hover {
+    background-color: #5a63d9;
+}
+
+.search-icon {
+    width: 24px; /* 调整图标大小 */
+    height: 24px;
+    fill: white;
+}
+
+/* 响应式布局 */
+@media (max-width: 1200px) {
+    .jianjie, .account {
+        left: 3%;
+        width: 35%;
+    }
+
+    .search {
+        left: 35%;
+        width: 65%;
+    }
+}
+
+@media (max-width: 992px) {
+    .jianjie, .account {
+        left: 2%;
+        width: 40%;
+    }
+
+    .search {
+        left: 30%;
+        width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    .jianjie, .account {
+        position: static; /* 取消固定定位 */
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .search {
+        position: static; /* 取消固定定位 */
+        width: 80%;
+        margin: 20px auto 0 auto; /* 确保搜索框在简介容器上方 */
+    }
+
+    .account-inner {
+        flex-direction: column;
+    }
+
+    .account-column {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .jianjie, .account {
+        width: 90%;
+    }
+
+    .search {
+        width: 90%;
+    }
+
+    .search-input, .search-button {
+        height: 40px; /* 调整输入框和按钮的高度 */
+    }
+
+    .search-button {
+        width: 40px; /* 调整按钮宽度 */
+    }
+
+    .search-icon {
+        width: 20px; /* 调整图标大小 */
+        height: 20px;
+    }
+}
+
+/* 底部元素 */
+.footer {
+    background-color: rgba(255, 255, 255, 0.9); /* 半透明背景 */
+    text-align: center;
+    padding: 20px 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    font-size: 14px;
+    color: #333; /* 文字颜色 */
+    display: flex;
+    justify-content: space-around; /* 等间距排列 */
+    align-items: center;
+    flex-direction: row; /* 横向排列 */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-content p {
+    margin: 0 10px; /* 段落间距 */
+}
+
+.footer a {
+    color: #7179f7; /* 链接颜色 */
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline; /* 鼠标悬停时的效果 */
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
