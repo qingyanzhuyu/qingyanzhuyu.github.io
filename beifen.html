@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8" />
+        <title>___Furina___ Blog Edit</title>
+        <link rel="stylesheet" href="lib/editormd/css/editormd.css" />
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body>
+        <div id="layout">
+            <header>
+                <h1>Simple example</h1>
+            </header>
+            <div id="test-editormd">
+                <textarea style="display:none;"></textarea>
+            </div>
+        </div>
+        <script src="scripts/jquery.min.js"></script>
+        <script src="lib/editormd/editormd.min.js"></script>
+        <script type="text/javascript">
+			var testEditor;
+
+            $(function() {
+                testEditor = editormd("test-editormd", {
+                    width   : "70%",
+                    height  : 540,
+                    syncScrolling : "single",
+                    path    : "lib/editormd/lib/"
+                });
+            });
+        </script>
+    </body>
+</html>
