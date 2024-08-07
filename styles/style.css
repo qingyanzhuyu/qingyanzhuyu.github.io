@@ -33,7 +33,6 @@ body {
     text-align: center;
     /* margin-top: 10px; */
     padding: 10px;
-    z-index: 1; /* 确保简介容器在最上层 */
 }
 
 .avatar {
@@ -106,7 +105,6 @@ body {
     padding: 10px;
     border-radius: 20px;
     text-align: center;
-    z-index: 1; /* 确保链接容器在最上层 */
 }
 
 .account-inner {
@@ -251,7 +249,22 @@ body {
     height: 24px;
     fill: white;
 }
-
+.editor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed; /* 固定位置 */
+    top: 20px; /* 距离顶部 20px */
+    left: 32%; /* 距离左侧 30% */
+    width: 80%; /* 宽度占页面的 80% */
+    height: 90%;
+    max-height: 800px;
+    max-width: 900px;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 /* 响应式布局 */
 @media (max-width: 1200px) {
     .jianjie, .account {

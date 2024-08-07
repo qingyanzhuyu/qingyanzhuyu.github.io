@@ -9,7 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link rel="icon" href="images/title.ico" type="image/x-icon" />
+
+    <script src="scripts/jquery.min.js"></script>
+    <script src="lib/editormd/editormd.min.js"></script>
+    <script src="lib/editormd/editormd.js"></script>
     <link href="styles/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="lib/editormd/css/editormd.css" />
     <title>___Furina___/qyzy 的博客主页</title>
 </head>
 <body>
@@ -40,14 +45,32 @@
             </div>
         </div>
         <div class="right-box">
-            <div class="search">
-                <input type="text" class="search-input" placeholder="输入你感兴趣的东西...">
-                <button class="search-button">
-                    <img src="images/search-icon.png" alt="Search" class="search-icon">
-                </button>
+            <div class="editor">
+                <div id="test-editormd">
+                    <textarea style="display:none;"></textarea>
+                </div>
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        var testEditor;
+
+        $(function() {
+            testEditor = editormd("test-editormd", {
+                width   : "95%",
+                height  : 600,
+                syncScrolling : "single",
+                path   : "lib/editormd/lib/" ,
+                emoji:true,
+                imageUpload: true,
+                watch:true,
+                imageFormats   : ["jpg", "jpeg", "gif", "png", "bmp", "webp","zip","rar"],
+                
+                imageUploadURL : "./upload.php", //文件提交请求路径
+                saveHTMLToTextarea : true, //注意3：这个配置，方便post提交表单
+            });
+        });
+    </script>
     <!-- 底部元素 -->
     <footer class="footer">
         <div class="footer-content">
