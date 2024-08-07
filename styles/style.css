@@ -207,7 +207,7 @@ body {
     position: fixed; /* 固定位置 */
     top: 20px; /* 距离顶部 20px */
     left: 32%; /* 距离左侧 30% */
-    width: 70%; /* 宽度占页面的 80% */
+    width: 60%; /* 宽度占页面的 80% */
     max-width: 800px;
     padding: 5px;
     background-color: rgba(255, 255, 255, 0.9);
@@ -256,8 +256,8 @@ body {
     position: fixed; /* 固定位置 */
     top: 20px; /* 距离顶部 20px */
     left: 32%; /* 距离左侧 30% */
-    width: 80%; /* 宽度占页面的 80% */
-    height: 90%;
+    width: 65%; /* 宽度占页面的 80% */
+    height: 85%;
     max-height: 800px;
     max-width: 900px;
     padding: 5px;
