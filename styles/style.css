@@ -266,7 +266,7 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 /* 响应式布局 */
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
     .jianjie, .account {
         left: 3%;
         width: 35%;
@@ -292,15 +292,15 @@ body {
 
 @media (max-width: 768px) {
     .jianjie, .account {
-        position: static; /* 取消固定定位 */
+        position: static;
         width: 80%;
         margin: 20px auto;
     }
 
     .search {
-        position: static; /* 取消固定定位 */
+        position: static;
         width: 80%;
-        margin: 20px auto 0 auto; /* 确保搜索框在简介容器上方 */
+        margin: 20px auto 0 auto; 
     }
 
     .account-inner {
@@ -322,18 +322,18 @@ body {
     }
 
     .search-input, .search-button {
-        height: 40px; /* 调整输入框和按钮的高度 */
+        height: 40px;
     }
 
     .search-button {
-        width: 40px; /* 调整按钮宽度 */
+        width: 40px; 
     }
 
     .search-icon {
-        width: 20px; /* 调整图标大小 */
+        width: 20px; 
         height: 20px;
     }
-}
+} */
 
 /* 底部元素 */
 .footer {
